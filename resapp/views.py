@@ -131,7 +131,6 @@ def dashboard(request):
         return HttpResponse("not found")
 
 
-#@app.route('/l', methods=['POST'])
 def login(request):
     if request.method == "POST":
         ename = request.POST.get("username")
@@ -183,7 +182,7 @@ def hlr(request):
         epass = request.POST.get("password")
 
         client = pymongo.MongoClient(
-            'mongodb+srv://2100032245:2100032245@cluster0.iejagan.mongodb.net/?retryWrites=true&w=majority')
+            'mongodb+srv://2100032245:2100032245@cluster0.iejagan.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
         db = client["Pfsd"]
         collection = db["sdp4"]
